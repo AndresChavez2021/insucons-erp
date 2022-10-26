@@ -26,3 +26,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+//Route::resource('proveedores',App\Http\Controllers\ProveedoreController::class)->middleware('auth');
