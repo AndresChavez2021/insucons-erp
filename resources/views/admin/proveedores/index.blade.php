@@ -57,13 +57,13 @@
 											<td>{{ $proveedore->telefono }}</td>
 											<td>{{ $proveedore->direccion }}</td>
 
-                                            <td>
+                                            <td >
                                                  <form action="{{ route('admin.proveedores.destroy',$proveedore->id) }}" method="POST"> 
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('admin.proveedores.show',$proveedore->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a> 
-                                                    <a class="btn btn-sm btn-success" href="{{ route('admin.proveedores.edit',$proveedore->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a width="10px" class="btn btn-sm btn-primary " href="{{ route('admin.proveedores.show',$proveedore->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a> 
+                                                    <a width="10px"class="btn btn-sm btn-success" href="{{ route('admin.proveedores.edit',$proveedore->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button> 
+                                                    <button width="10px" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button> 
                                                 </form> 
                                             </td>
                                         </tr>
