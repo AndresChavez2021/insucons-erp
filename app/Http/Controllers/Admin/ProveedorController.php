@@ -49,7 +49,7 @@ class ProveedorController extends Controller
 		'telefono' => 'required',
 		'direccion' => 'required',
         ]);
-        $proveedore = Proveedore::create($request->all());
+         Proveedore::create($request->all());
 
         return redirect()->route('admin.proveedores.index')
             ->with('success', 'Proveedore created successfully.');

@@ -12,5 +12,11 @@ class Marca extends Model
         'nombre'
     ];
 
+
+    public function materiales()
+    {
+        return $this->hasMany('App\Models\Materiale', 'marca_id', 'id');
+    }
+    
       
 }

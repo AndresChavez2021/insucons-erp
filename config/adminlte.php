@@ -289,117 +289,159 @@ return [
     |
     */
 
-    'menu' => [
+    'menu' => 
+    [
+         [
+            'text'    => 'Administracion y Seguridad',
+            'icon'    => 'fas fa-fw fa-balance-scale',
+            'submenu' => [
 
-            [   'text' => ' Marcas',
-            'route'  => 'admin.marcas.index',
-            'icon' => 'fas fa-fw fa-bookmark',
-            ],
-            [   'text' => ' proveedores',
-            'route'  => 'admin.proveedores.index',
-            'icon' => 'fas fa-fw fa-bookmark',
-            ],
-    
+               [
+                  'text' => ' Roles y permisos',
+                //   'route'  => 'admin ',
+                 'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+               ],
+               [
+                'text' => ' Bitacora',
+                //  'route'  => 'admin.marcas.index',
+               'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+               ],
+            ]
 
+         ] ,  
+         [
+            'text'    => 'Entradas y Salidas',
+            'icon'    => 'fas fa-fw fa-balance-scale',
+            'submenu' => [
 
+               [
+                    'text' => ' Facturas ',
+                   
+                    'label_color'=>'danger',
+                    'url'=>'#',
+                    //   'route'  => 'admin ',
+                    'label'=> 'proximamente',
+                    'label_color'=>'danger',
+                    'icon' => 'fas fa-fw fa-fax', //cambiar icon
+               ],
+               [ 
+                     'text' => 'Notas',
+                     
+                     'route'  => 'admin.notas.index',
+                     'icon' => 'fas fa-fw fa-info', //cambiar icon
+               ],
+               [
+                'text' => ' metodo de pago ',
+               
+                'label_color'=>'danger',
+                'url'=>'#',
+                //   'route'  => 'admin ',
+                'label'=> 'proximamente',
+                'label_color'=>'danger',
+                'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+           ],
+               
+            ]
 
-        // Navbar items:
-        // [
-        //     'type'         => 'navbar-search',
-        //     'text'         => 'search',
-        //     'topnav_right' => true,
-        // ],
-        // [
-        //     'type'         => 'fullscreen-widget',
-        //     'topnav_right' => true,
-        // ],
+         ] ,  
+         [
+            'text'    => 'Personal',
+            'icon'    => 'fa-solid fa-helmet-safety',
+            'submenu' => [
 
-        // // Sidebar items:
-        // [
-        //     'type' => 'sidebar-menu-search',
-        //     'text' => 'search',
-        // ],
-        // [
-        //     'text' => 'blog',
-        //     'url'  => 'admin/blog',
-        //     'can'  => 'manage-blog',
-        // ],
-        // [
-        //     'text'        => 'pages',
-        //     'url'         => 'admin/pages',
-        //     'icon'        => 'far fa-fw fa-file',
-        //     'label'       => 4,
-        //     'label_color' => 'success',
-        // ],
+                [ 
+                    'text' => ' Personas',
+                    'route'  => 'admin.personas.index',
+                    'icon' => 'fas  fa-users', //cambiar icon
+                    ],
+                    [   
+                        'text' => ' proveedores',
+                        'route'  => 'admin.proveedores.index',
+                        'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+                    ],
+                    [ 
+                        'text' => ' Cargos',
+                        'route'  => 'admin.cargos.index',
+                        'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+                        ],
+                        
+                        [ 
+                        'text' => ' Contratos',
+                        'route'  => 'admin.contratos.index',
+                        'icon' => 'fas  fa-users', //cambiar icon
+                        ],
+            ]
 
-        
-        // ['header' => 'account_settings'],
-        // [
-        //     'text' => 'profile',
-        //     // 'url'  => 'admin/settings',
-        //     'route'=>'profile.show',
-        //     // {{ route('profile.show') }}
-        //     'icon' => 'fas fa-fw fa-user',
-        // ],
-        // [
-        //     'text' => 'change_password',
-        //     'url'  => 'admin/settings',
-        //     'icon' => 'fas fa-fw fa-lock',
-        // ],
-        // [
-        //     'text'    => 'multilevel',
-        //     'icon'    => 'fas fa-fw fa-share',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //         [
-        //             'text'    => 'level_one',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'level_two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'level_two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //     ],
-        // ],
-        // ['header' => 'labels'],
-        // [
-        //     'text'       => 'important',
-        //     'icon_color' => 'red',
-        //     'url'        => '#',
-        // ],
-        // [
-        //     'text'       => 'warning',
-        //     'icon_color' => 'yellow',
-        //     'url'        => '#',
-        // ],
-        // [
-        //     'text'       => 'information',
-        //     'icon_color' => 'cyan',
-        //     'url'        => '#',
-        // ],
+         ] , 
+         [
+            'text'    => 'Proyectos',
+            'label'=> 'proximamente',
+            'label_color'=>'danger',
+             'icon'    => 'fas fa-fw fa-balance-scale',
+            'submenu' => [
+
+               [
+                  'text' => ' Gestionar proyectos',
+                //   'route'  => 'admin ',
+                 'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+               ],
+               [
+                'text' => ' Gestionar contrato',
+                //  'route'  => 'admin.marcas.index',
+               'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+               ],
+               [
+                'text' => ' Gestionar documento',
+                //  'route'  => 'admin.marcas.index',
+               'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+               ],
+               [
+                'text' => ' Gestionar presupuesto',
+                //  'route'  => 'admin.marcas.index',
+               'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+               ],
+               [
+                'text' => ' Gestionar Informe de seguimientos',
+                //  'route'  => 'admin.marcas.index',
+               'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+               ],
+            ]
+
+         ] ,  
+         [
+            'text'    => 'Productos y Servicios',
+            'icon'    => 'fas fa-fw fa-truck',
+            'submenu' =>
+             [
+                [ 
+                    'text' => 'Gestionar Servicios',
+                    'route'  => 'admin.servicios.index',
+                    'icon' => 'fas  fa-users', //cambiar icon
+                     
+                ],
+                [ 
+                    'text' => 'Gestionar Materiales',
+                    'route'  => 'admin.materiales.index',
+                    'icon' => 'fas fa-fw fa-store', //cambiar icon
+                     
+                ],
+
+                [
+                    'text' => 'Gestionar Marcas',
+                    'route'  => 'admin.marcas.index',
+                    'icon' => 'fas fa-fw fa-bookmark', //cambiar icon
+                 ],
+
+                 [ 
+                    'text' => 'Gestionar Medidas',
+                    'route'  => 'admin.medidas.index',
+                    'icon' => 'fas  fa-users', //cambiar icon
+                 ],
+               
+             ]
+
+         ] ,  
+           
     ],
 
     /*
@@ -554,5 +596,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];

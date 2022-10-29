@@ -5,27 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Proveedore
+ * Class Cargo
  *
  * @property $id
- * @property $nit
  * @property $nombre
- * @property $telefono
- * @property $direccion
  * @property $created_at
  * @property $updated_at
  *
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Proveedore extends Model
+class Cargo extends Model
 {
     
     static $rules = [
-		'nit' => 'required',
 		'nombre' => 'required',
-		'telefono' => 'required',
-		'direccion' => 'required',
     ];
 
     protected $perPage = 20;
@@ -35,11 +29,18 @@ class Proveedore extends Model
      *
      * @var array
      */
-    protected $fillable = ['nit','nombre','telefono','direccion'];
+    protected $fillable =
+    
+    ['nombre'];
 
-    public function notas()
-    {
-        return $this->hasMany('App\Models\Nota', 'proveedor_id', 'id');
+    // model Cargo 
+
+     public function personas(){
+        return $this->belongsToMany('App\Models\Persona');
     }
 
+    // public function personas(){
+    //   return $this->belongsToMany(Cargo::class,'App\Models\Cargo');
+    // }
+      
 }
